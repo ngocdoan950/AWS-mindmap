@@ -1,0 +1,15 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          cognito:
+            client-id: your_clientId
+            client-secret: your_clientSecret
+            scope: openid
+            redirect-uri: http://localhost:8080/login/oauth2/code/cognito
+            clientName: your_clientName
+        provider:
+          cognito:
+            issuerUri: https://shopapp.auth.ap-southeast-1.amazoncognito.com
+            user-name-attribute: cognito:username
